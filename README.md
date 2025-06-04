@@ -26,8 +26,7 @@ Este contrato permite a múltiples usuarios ofertar por un ítem. Las ofertas de
 
 🏗️ Constructor
 
-```solidity
-constructor(uint _duracionEnSegundos, string memory _item)```
+```solidity constructor(uint _duracionEnSegundos, string memory _item)```
 
 Inicializa la subasta con:
 

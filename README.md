@@ -26,7 +26,10 @@ Este contrato permite a múltiples usuarios ofertar por un ítem. Las ofertas de
 
 🏗️ Constructor
 
+```solidity
 constructor(uint _duracionEnSegundos, string memory _item)
+```solidity
+
 Inicializa la subasta con:
 
 _duracionEnSegundos: duración total de la subasta en segundos.

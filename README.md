@@ -26,7 +26,10 @@ Este contrato permite a múltiples usuarios ofertar por un ítem. Las ofertas de
 
 🏗️ Constructor
 
-```solidity constructor(uint _duracionEnSegundos, string memory _item)```
+```
+solidity
+constructor(uint _duracionEnSegundos, string memory _item)
+```
 
 Inicializa la subasta con:
 
@@ -36,26 +39,39 @@ _item: descripción del objeto subastado.
 
 🏷️ Realizar una oferta
 
+```
+solidity
 function ofertar() public payable
+```
 Solo acepta si la nueva oferta supera en al menos un 5% a la actual.
 
 Si quedan menos de 10 minutos, se extiende automáticamente el tiempo.
 
 🥇 Obtener ganador
 
+```
+solidity
 function obtenerGanador() public view returns (address, uint)
+```
+
 Devuelve el mejor oferente y su oferta.
 
 Solo se puede consultar después de finalizar la subasta.
 
 📜 Listar todas las ofertas
 
+```
+solidity
 function listarOfertas() public view returns (address[], uint[])
+```
 Muestra todas las direcciones que ofertaron y sus montos.
 
 ⏹️ Finalizar la subasta
 
+```
+solidity
 function finalizarSubasta() public onlyOwner
+```
 Solo puede ser llamada por el owner.
 
 Marca la subasta como finalizada.
@@ -66,7 +82,10 @@ Cobra una comisión del 2% al ganador.
 
 💸 Reembolso de exceso (participantes)
 
+```
+solidity
 function retirarExceso() public
+```
 Permite a los usuarios retirar el exceso depositado (cuando han ofertado varias veces).
 
 Solo se puede usar antes de que finalice la subasta.
@@ -79,19 +98,21 @@ Permite al **owner** retirar cualquier fondo sobrante que haya quedado en el con
 - Excedentes no reclamados por los usuarios.
 
 💰 Registro de ofertas
+
+```
 solidity
-Copy
-Edit
 mapping(address => uint) public ofertas;
+```
 Guarda el total ofertado por cada dirección.
 
 📢 Eventos
+
+```
 solidity
-Copy
-Edit
 event NuevaOferta(address indexed oferente, uint monto);
 event SubastaFinalizada(address ganador, uint montoGanador);
 event Reembolso(address oferente, uint monto);
+```
 Se emiten durante los momentos clave del ciclo de la subasta.
 
 Facilitan el seguimiento desde interfaces frontend o en herramientas como Etherscan.

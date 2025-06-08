@@ -17,8 +17,8 @@ Este contrato permite a múltiples usuarios ofertar por un ítem. Las ofertas de
 ## 🚀 Despliegue
 
 - **Red:** Sepolia
-- **Verificado en:** [Etherscan Sepolia](https://sepolia.etherscan.io/)
-- **Repositorio:** [GitHub Repo](https://github.com/usuario/subasta-smartcontract)
+- **Verificado en:** [Etherscan Sepolia](https://sepolia.etherscan.io/address/0xcae9d37865f3f1771320352ae412031a0e0eb54e)
+- **Repositorio:** [GitHub Repo](https://github.com/melorenzo/smartcontract_subasta)
 
 ---
 
